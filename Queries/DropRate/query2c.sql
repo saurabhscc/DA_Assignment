@@ -20,8 +20,7 @@ from
 (select distinct user_id,sum(visit_rank) as Total_visits    
 FROM transaction_log_loyalty_
 GROUP BY user_id)as SUBQUERY
-where total_visits = x
-))); 
+where total_visits = x))); 
 		SET  x = x + 1;
 	END LOOP;
 
@@ -31,8 +30,7 @@ from
 (select distinct user_id,sum(visit_rank) as Total_visits
 FROM transaction_log_loyalty_
 GROUP BY user_id)as SUBQUERY
-where total_visits > 9
-)));
+where total_visits > 9)));
 select 'Total_visits','Customer'
 union all
 select * INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/result2c.csv' 
