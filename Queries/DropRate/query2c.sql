@@ -35,7 +35,7 @@ where total_visits > 9
 )));
 select 'Total_visits','Customer'
 union all
-select * INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/2c.csv' 
+select * INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/result2c.csv' 
 FIELDS TERMINATED BY ','  
 ENCLOSED BY '"'   
 LINES TERMINATED BY '\n'
